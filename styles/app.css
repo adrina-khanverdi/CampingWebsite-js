@@ -156,7 +156,7 @@ a {
 }
 
 .header {
-    background: linear-gradient(rgba(59, 55, 53, 0.5), rgba(59, 55, 53, 0.5)), url("../images/header-bg.jpg");
+    background: linear-gradient(rgba(59, 55, 53, 0.5), rgba(59, 55, 53, 0.5)), url("../images/headermoon.jpg");
     background-position: center;
     background-size: cover;
     min-height: 70rem;
@@ -214,7 +214,8 @@ a {
 }
 
 .menu__item {
-    margin-right: 1.5rem;
+	margin-right: 2.5rem;
+    position: relative;
 }
 
 .menu__link {
@@ -244,7 +245,6 @@ a {
     background-color: var(--primary-color);
     transform: rotate(45deg);
     z-index: -1;
-
     margin: 0 auto;
 }
 
@@ -349,6 +349,7 @@ a {
 .nav-menu__link:hover {
     background-color: #fff;
     color: var(--dark);
+
 }
 
 .nav-menu__link--border {
@@ -370,6 +371,15 @@ a {
     color: var(--white);
     font-family: var(--primary-font-md);
     margin-left: 1.5rem;
+    transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+}
+.nav__link:first-child:hover{
+    font-size: 2rem;
+    color: #8D8D8D;
 }
 
 .nav__link--border {
@@ -451,32 +461,53 @@ a {
 ==================
 
 */
+.header-wrapper{
+display: flex;
+justify-content: center ;
+align-items: center;
+padding: 0;
 
+}
 .header-content {
-    text-align: center;
-    color: var(--white);
-    margin-top: 6rem;
+	text-align: center;
+	color: var(--white);
+    margin-left: -288rem;
+	
 }
 
 .header-content__title {
     font-family: var(--secondary-font);
     font-size: 5rem;
     line-height: 1.2;
-    max-width: 35rem;
-    margin: 0 auto 3rem auto;
+    margin: 5rem auto 3rem auto;
 
 }
-
+.header-content-imag {
+    display: none;
+	width: 664px;
+	height: 645px;
+    margin-left: 288rem;
+}
 .header-content__caption {
     font-size: 1.8rem;
-    max-width: 34rem;
     margin: 0 auto 2rem auto;
 }
 
 .header-content__link {
     background-color: var(--primary-color);
+    transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
 }
-
+.header-content__link:hover {
+	width: 19.5rem;
+	height: 5.5rem;
+	background-color: var(--grey);
+	color: var(--dark);
+	box-shadow: 1.5rem 1.5rem 1.5rem #2b2424;
+}
 
 /*
 
@@ -496,7 +527,7 @@ a {
 
 */
 .services{
-    margin-top: -20rem;
+    margin-top: -14rem;
     display: flex;
     flex-wrap: wrap;
     margin-left: -1rem;
@@ -1006,6 +1037,7 @@ media Query
         top: -10rem;
         left: -30rem;
     }
+  
 }
 
 @media (min-width: 1200px) {
@@ -1042,6 +1074,13 @@ media Query
     .newsletter::before{
         top: -15rem;
         left: -15rem;
+    }
+    .header-content-imag {
+        display: block;
+    }
+    .header-wrapper {
+      
+        margin-top: -3rem;
     }
 }
 

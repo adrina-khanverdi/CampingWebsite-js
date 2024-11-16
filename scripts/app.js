@@ -1,5 +1,7 @@
 const navBtn = document.querySelector(".nav__btn")
 const navMenu = document.querySelector(".nav-menu")
+const headerContentTitle =document.querySelector(".header-content")
+const headerContentImag =document.querySelector(".header-content-imag")
 
 let navOpen = false;
 navBtn.addEventListener("click", function () {
@@ -13,4 +15,15 @@ navBtn.addEventListener("click", function () {
         navMenu.classList.add("nav-menu--open")
         navOpen = true
     }
+})
+gsap.to(headerContentTitle,{
+        marginLeft:0,
+        duration:2,
+        ease: "power1.out",
+})
+gsap.to(headerContentImag,{
+    marginLeft:0,
+    duration:2,
+    ease: "power1.out",
+
 })
